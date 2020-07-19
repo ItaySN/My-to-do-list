@@ -3,15 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
 </head>
 <body>
+<h1>TodoList</h1>
+<div id="counter-div">
+<p>
+<span id="counter"></span>
+<label for="sort"><input type="button" id="sort" value="sort"></label>
+</p>
+</div>
 <section id="control-section">
+    <div id="control-div">
+        <label for="textInput"><input type="text" id="textInput" maxlength="45"></label>
+        <label for="prioritySelector">
+        <select name="numbers" id="prioritySelector">
+            <option value="1" selected>1 </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></label>
+        <label for="addButton"><input type="button" id="addButton" value="Add" onclick="addDoing()"></label>
+        <label for="undoButton"><input type="button" id="undoButton" value="Undo" onclick="undoFunction()"></label>
+    </div>
+<script>
+var item_Name = document.getElementById("textInput");
+item_Name.addEventListener("keydown",function(e)
+{
+    if(e.keyCode===13)
+        document.getElementById("addButton").click();
+});
 
+var ctrl_Z = document.getElementById("control-div");
+ctrl_Z.addEventListener("keydown", function(e)
+{
+    if(e.which===90)
+        document.getElementById("undoButton").click();
+});
+
+</script>
+        
 </section>
 <section id="View section">
+<ul id="item-list">
 
+</ul>
 </section>
-    
+<script src="main.js"></script>   
 </body>
 </html>
