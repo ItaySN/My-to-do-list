@@ -126,4 +126,3 @@ I added a vercel site  - https://vercel.com/itaysn
 
 my selfie video:
 
-https://drive.google.com/file/d/1-8o0ml5q-Q9yWdLeQdBEAhoYMSYRHTq2/view?usp=sharing
