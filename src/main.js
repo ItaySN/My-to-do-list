@@ -238,3 +238,8 @@ function colorByPriority(taskPriority,divPriority)
     }
 }
 
+// On startup, display all tasks stored in localStorage, by the orderedTaskIds
+orderedTaskIds.map(function(taskId) {
+    var task = tasksById[taskId];
+    addTaskRow(task);
+});
