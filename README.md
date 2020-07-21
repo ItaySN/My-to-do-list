@@ -115,3 +115,12 @@ $ npm run test
  - Add link to the PR you created in your private repo [here](https://docs.google.com/spreadsheets/d/1P9_YDGqIqmV10fvTmIXc_AGV0_ycI2aBFo2h5zprUMI/edit#gid=1903529310), fill the other details
 
  GOOD LUCK!
+ 
+ my features : 
+ Local storage – I've been created a JSON file that save the data every time that the web is load.
+Search  bar – I've been created filter that check if the task test conatins the text in the search.
+sort by date – I created a function that order the tasks by their ID . 
+sort by priority – I created a function that order the tasks by their priority .
+I added a vercel site  - https://vercel.com/itaysn
+
+
