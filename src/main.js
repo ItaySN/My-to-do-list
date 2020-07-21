@@ -137,3 +137,56 @@ function validateText(text) {
     return true;
 }
 
+function sortByPriority() {
+
+    // Sort by priority DESC
+    var tasksArray = Object.values(tasksById); // Convert tasksById object to array
+    var sortedTasksArray = tasksArray.sort(function(taskA, taskB) {
+        if (taskA.priority < taskB.priority) {
+            return 1;
+        }
+        else {
+            return -1;
+        }
+    });
+
+    // Clear all tasks from UI
+    tasksListEl.innerHTML = '';
+
+    // Append all tasks, now by the correct order
+    // Make sure orderedTaskIds is up to date with the new order
+    orderedTaskIds = [];
+    sortedTasksArray.map(function(task) {
+        orderedTaskIds.push(task.id);
+        addTaskRow(task);
+    });
+
+    localStorage.setItem('ordered_task_ids', JSON.stringify(orderedTaskIds));
+}
+
+function sortByCreateDate() {
+
+    // Sort by create date DESC (basically by ID desc)
+    var tasksArray = Object.values(tasksById);
+    var sortedTasksArray = tasksArray.sort(function(taskA, taskB) {
+        if (taskA.id < taskB.id) {
+            return 1;
+        }
+        else {
+            return -1;
+        }
+    });
+
+    // Clear all tasks from UI
+    tasksListEl.innerHTML = '';
+
+    // Append all tasks, now by the correct order
+    // Make sure orderedTaskIds is up to date with the new order
+    orderedTaskIds = [];
+    sortedTasksArray.map(function(task) {
+        orderedTaskIds.push(task.id);
+        addTaskRow(task);
+    });
+
+    localStorage.setItem('ordered_task_ids', JSON.stringify(orderedTaskIds));
+}
