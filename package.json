@@ -20,5 +20,8 @@
     "@suvelocity/tester": "^1.0.2",
     "jest": "^26.0.1",
     "puppeteer": "^4.0.0"
+  },
+  "dependencies": {
+    "moment": "^2.27.0"
   }
 }
