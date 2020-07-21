@@ -22,13 +22,14 @@
             </label>
             <label for="searchInput"><input type="text" id="searchInput" placeholder="Search a Task.." onkeyup="searchTask()"></label>
         </div>
+
         <section id="control-section">
             <div id="control-div">
                 <form id="control-form">
                     <label for="textInput">
-                        <input type="text" id="textInput" maxlength="60" autocomplete="off" placeholder="Add a Task..">
+                        <input type="text" id="textInput" maxlength="60" autocomplete="off" placeholder="Add a Task.." style="margin-right: 40px;">
                     </label>
-                    <label for="prioritySelector">
+                    <label for="prioritySelector" style="font-weight: bold"> Task Priority:
                     <select name="numbers" id="prioritySelector">
                         <option value="1">1 </option>
                         <option value="2">2</option>
@@ -36,8 +37,8 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></label>
-                    <label for="addButton">
-                        <button type="submit" class="btn btn-primary" id="addButton"> <i class="fa fa-plus"></i>  </button>
+                    <label for="addButton" style="margin-left: 25px;"> Add :
+                        <button type="submit" class="btn btn-primary" id="addButton"><i class="fa fa-plus"></i>  </button>
                     </label>
                 </form>
         </section>
