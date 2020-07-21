@@ -124,6 +124,8 @@ sort by priority – I created a function that order the tasks by their priority
 I added a vercel site  - https://vercel.com/itaysn
 
 
-my selfie video:
 
+
+my selfie video: 
 https://drive.google.com/file/d/1-8xvw-bzZoq_XntjePjxXSjFTc1l8wEi/view?usp=sharing 
+
