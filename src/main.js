@@ -190,3 +190,51 @@ function sortByCreateDate() {
 
     localStorage.setItem('ordered_task_ids', JSON.stringify(orderedTaskIds));
 }
+function searchTask()
+{
+    var textSearch=document.getElementById("searchInput").value;
+    let filter = textSearch.toUpperCase();
+    let containerDivArr = document.getElementsByClassName("todoContainer");
+    for(let i=0;i<containerDivArr.length;i++)
+    {
+        let textOfTask = containerDivArr[i].childNodes[2].textContent;
+        if (textOfTask.toUpperCase().indexOf(filter) > -1) {
+        containerDivArr[i].style.display = "";
+         }
+        else {
+        containerDivArr[i].style.display = "none";
+        }
+    }
+}
+function colorByPriority(taskPriority,divPriority)
+{
+    switch(taskPriority){
+        case "1":
+            {
+                divPriority.style.backgroundColor = "greenyellow";
+                break;
+            }
+        case "2":
+            {
+                divPriority.style.backgroundColor = "green";
+                break;
+            }
+        case "3":
+            {
+                divPriority.style.backgroundColor = "rgb(238, 241, 4)";
+                break;
+            }
+        case "4":
+            {
+                divPriority.style.backgroundColor ="rgb(233, 146, 33)";
+                break;
+            }
+        case "5":
+            {
+                divPriority.style.backgroundColor = "red";
+                break;
+           }
+           
+    }
+}
+
