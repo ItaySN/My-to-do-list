@@ -109,3 +109,31 @@ function addTaskRow(task) {
     document.getElementById('textInput').focus();
 
 }
+
+function deleteTask(taskId) {
+
+    // Remove from tasksById
+    delete tasksById[taskId];
+    localStorage.setItem('tasks_by_id', JSON.stringify(tasksById));
+
+    // Remove from orderedTaskIds
+    var index = orderedTaskIds.indexOf(taskId);
+    if (index > -1) {
+        orderedTaskIds.splice(index, 1);
+    }
+    localStorage.setItem('ordered_task_ids', JSON.stringify(orderedTaskIds));
+
+    // Update tasks counter and the counter in display
+    tasksCounter--;
+    counterDiv.innerHTML = tasksCounter;
+}
+
+function validateText(text) {
+    if (!(/\S/.test(text))) //check if there is some chars in the text ;
+    {
+        alert("XXX  Error!  XXX \n Your must to write something in the text-bar!!!");
+        return false;
+    }
+    return true;
+}
+
